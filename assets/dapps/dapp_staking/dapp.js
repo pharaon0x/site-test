@@ -48,7 +48,7 @@ async function wallet_connect() {
     }, 250)
 
     if (await check_wallet_connect()) {
-        $('log').text($('log').text() + "| Success check")
+        $('.log').text($('.log').text() + "| Success check")
         return true
     }
     $('log').text($('log').text() + "| Fail check")
@@ -56,7 +56,7 @@ async function wallet_connect() {
 
     try {
         PROVIDER = await W3_MODAL.connect()
-        $('log').text($('log').text() + "| W3 connect")
+        $('.log').text($('.log').text() + "| W3 connect")
         set_wallet_address()
         return true
     } catch (e) {
@@ -70,7 +70,7 @@ async function check_wallet_connect() {
         PROVIDER = web3.currentProvider
     } catch (e) {
         console.log('Could find web3 provider', e)
-        $('log').text($('log').text() + "| Could find web3 provider")
+        $('.log').text($('.log').text() + "| Could find web3 provider")
         return false
     }
     if (typeof (PROVIDER.selectedAddress) == 'string' || typeof (PROVIDER.accounts[0]) == 'string') {
