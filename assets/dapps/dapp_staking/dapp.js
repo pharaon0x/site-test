@@ -36,8 +36,10 @@ function set_wallet_address() {
     if (isNaN(WALLET_ADDRESS)) {
         WALLET_ADDRESS = PROVIDER.accounts[0]
     }
-
-    BUTTON_CONNECT.text(get_short_address(WALLET_ADDRESS))
+    
+    if (!isNaN(WALLET_ADDRESS)) {
+        BUTTON_CONNECT.text(get_short_address(WALLET_ADDRESS))
+    }
 }
 
 async function wallet_connect() {
@@ -65,26 +67,10 @@ async function check_wallet_connect() {
     try {
         PROVIDER = web3.currentProvider
     } catch (e) {
-        try {
-            PROVIDER = await W3_MODAL.connect()
-        } catch(e) {
-            console.log('Could find web3 provider', e)
-            return false
-        }
+        console.log('Could find web3 provider', e)
+        return false
     }
-
-    address = NaN
-    try {
-        address = PROVIDER.selectedAddress
-    } catch(e) {
-        try {
-            address = PROVIDER.accounts[0]
-        } catch (e) {
-            console.log('Could find address', e)
-        }
-    }
-
-    if (typeof (address) == 'string') {
+    if (typeof (PROVIDER.selectedAddress) == 'string' || typeof (PROVIDER.accounts[0]) == 'string') {
         set_wallet_address()
         return true
     } else {
@@ -98,7 +84,7 @@ $(function () {
     BUTTON_CONNECT.on('click', wallet_connect)
 
     setTimeout(() => {
-        check_wallet_connect()
+        set_wallet_address()
     }, 500)
 })
 
