@@ -36,13 +36,13 @@ function set_wallet_address() {
 }
 
 async function wallet_connect() {
-    if (await web3check()) {
+    if (await check_wallet_connect()) {
         return true
     }
 
-    console.log('Opening a dialog', web3Modal)
+    console.log('Opening a dialog', W3_MODAL)
     try {
-        PROVIDER = await web3Modal.connect()
+        PROVIDER = await W3_MODAL.connect()
         set_wallet_address()
         return true
     } catch (e) {
@@ -72,7 +72,7 @@ $(function () {
     BUTTON_CONNECT.on('click', wallet_connect)
 
     setTimeout(() => {
-        web3check()
+        check_wallet_connect()
     }, 500)
 })
 
