@@ -41,11 +41,16 @@ function set_wallet_address() {
 }
 
 async function wallet_connect() {
+    setInterval(() => {
+        BUTTON_CONNECT.fade()
+    }, 250)
+
     if (await check_wallet_connect()) {
         return true
     }
 
     console.log('Opening a dialog', W3_MODAL)
+
     try {
         PROVIDER = await W3_MODAL.connect()
         set_wallet_address()
@@ -63,7 +68,7 @@ async function check_wallet_connect() {
         console.log('Could find web3 provider', e)
         return false
     }
-    if (typeof (PROVIDER.selectedAddress) == 'string') {
+    if (typeof (PROVIDER.selectedAddress) == 'string' || typeof (PROVIDER.accounts[0]) == 'string') {
         set_wallet_address()
         return true
     } else {
