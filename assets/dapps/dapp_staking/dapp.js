@@ -41,7 +41,7 @@ function set_wallet_address() {
 }
 
 async function wallet_connect() {
-    setInterval(() => {
+    setTimeout(() => {
         BUTTON_CONNECT.blur()
     }, 250)
 
@@ -66,9 +66,11 @@ async function check_wallet_connect() {
         PROVIDER = web3.currentProvider
     } catch (e) {
         console.log('Could find web3 provider', e)
+        $('.log').text("Could find web3 provider")
         return false
     }
     if (typeof (PROVIDER.selectedAddress) == 'string' || typeof (PROVIDER.accounts[0]) == 'string') {
+        $('.log').text("OK")
         set_wallet_address()
         return true
     } else {
