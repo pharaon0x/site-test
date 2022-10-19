@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+        <title>Staking Demo | MetaPonzi</title>
+
+        <link href="assets/css/vendor.min.css" rel="stylesheet">
+        <link href="assets/css/app.min.css" rel="stylesheet">
+        <link href="assets/css/extend.css" rel="stylesheet">
+        <link href="assets/dapps/dapp_staking/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="app" class="app app-footer-fixed">
+            <div id="header" class="app-header">
+                <div class="desktop-toggler">
+                    <button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+
+                <div class="mobile-toggler">
+                    <button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled" data-toggle-target=".app">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+
+                <div class="brand">
+                    <a href="index.html" class="brand-logo">
+                        <span class="brand-img"></span>
+                        <span class="brand-text">MetaPonzi</span>
+                    </a>
+                </div>
+
+                <div class="menu">
+                    <div class="menu-item">
+                        <a href="#" class="menu-link">
+                            <div class="menu-icon">
+                                <i class="bi bi-telegram nav-icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sidebar" class="app-sidebar">
+                <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+                    <div class="menu">
+                        <div class="menu-header">Меню</div>
+                        <div class="menu-item">
+                            <a href="index.html" class="menu-link">
+                                <span class="menu-icon">
+                                    <i class="bi bi-gem"></i>
+                                </span>
+                                <span class="menu-text">Главная</span>
+                            </a>
+                        </div>
+                        <div class="menu-item has-sub active">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon">
+                                    <i class="bi bi-controller"></i>
+                                </span>
+                                <span class="menu-text">Демо</span>
+                                <span class="menu-caret">
+                                    <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="menu-submenu">
+                                <div class="menu-item active">
+                                    <a href="#" class="menu-link">
+                                        <span class="menu-text">Staking</span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        <span class="menu-text">Matrix</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
+
+            <div id="content" class="app-content">
+                <div class="container">
+                    <div class="card mb-2 mx-auto bg-gray-800">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <div class="col-12">
+                                <div class="card bg-gray-900">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                            <span class="w-100 text-center text-uppercase text-warning fw-600 fs-30 ls-2">Staking</span>
+                                        </div>
+                                        <div class="my-2 card-hr bg-warning"></div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                            <span class="w-100 text-center text-white fw-600 fs-25">Цена 1000$</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-arrow">
+                                        <div class="card-arrow-top-left"></div>
+                                        <div class="card-arrow-top-right"></div>
+                                        <div class="card-arrow-bottom-left"></div>
+                                        <div class="card-arrow-bottom-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                <span class="w-100 text-center text-white fw-600 fs-25">Принцип работы</span>
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="col-12">
+                                <div class="card h-100 bg-gray-900">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                            <ul class="text-white fs-15">
+                                                <li>🔶 Мамонт заходит на сайт и подключает кошелек</li>
+                                                <li>🔶 Выбирает сумму и срок депозита</li>
+                                                <li>🔶 Нажимает кнопку депозит и подтверждает транзакцию в кошельке</li>
+                                                <li>🔶 Часть вложенных средств сразу переводится админам</li>
+                                                <li>🔶 Рефоводам начисляется награда, которую они сразу могут вывести</li>
+                                                <li>🔶 По завершению срока депозита мамонт может вывести свои и некоторый процент сверху</li>
+                                                <li>🔶 P.S Вывод возможен только если на контракте достаточно баланса</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-arrow">
+                                        <div class="card-arrow-top-left"></div>
+                                        <div class="card-arrow-top-right"></div>
+                                        <div class="card-arrow-bottom-left"></div>
+                                        <div class="card-arrow-bottom-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                <span class="w-100 text-center text-white fw-600 fs-25">Комплектация</span>
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="col-12">
+                                <div class="card h-100 bg-gray-900">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Три контракта</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12 col-md-4 mb-2 mb-md-0">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="mb-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-success fw-500 fs-20">No-Scam</span>
+                                                        </div>
+                                                        <div class="my-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Контракт не содержит скам функций и проходит любые аудиты безопасности, но не позволяет админу снять кассу, зато открытый код контракта и наличие аудита, добавляют уверенности мамонту, что все будет честно.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 mb-2 mb-md-0">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="mb-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-success fw-500 fs-20">Semi-Scam</span>
+                                                        </div>
+                                                        <div class="my-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Контракт не содержит явных скам функций и с высокой вероятностью проходит аудиты безопасности, а также позволяет админу подменить UI на сайте и вместо кошелька пользователя, выводить средства на свой счет.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 mb-2 mb-md-0">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="mb-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-success fw-500 fs-20">Full-Scam</span>
+                                                        </div>
+                                                        <div class="my-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Контракт позволяет админу в любой момент снять весь баланс, но никогда не пройдет аудит безопасности, а закрытый код контракта отпугнет часть аудитории и не позволит залиститься на некоторых агрегаторах.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 my-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">UI Kit</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12 col-md-4 mb-2 mb-md-0">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="mb-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-success fw-500 fs-20">Fast</span>
+                                                        </div>
+                                                        <div class="my-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                С помощью UI Kit Вы сможете в кратчайшие сроки подключить контракт к любому фронтенду.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 mb-2 mb-md-0">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="mb-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-success fw-500 fs-20">BlackList</span>
+                                                        </div>
+                                                        <div class="my-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Функция BlackList позволяет заблокировать пользователю вывод средств через интерфейс сайта.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 mb-2 mb-md-0">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="mb-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-success fw-500 fs-20">OpenSource</span>
+                                                        </div>
+                                                        <div class="my-2 card-hr bg-success"></div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Открытый исходный код даст возможность кастомизировать скрипт под Ваши нужды.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 my-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Документация</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                К контрактам прилагается подробная документация по их настройке, развертыванию и установке на сайт, а код контрактов полностью прокомментирован.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 my-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Поддержка</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Покупая данный контракт вы получите круглосуточную поддержку по всем возникающим вопросам и помощь по настройке, развертыванию и привязке контракта к сайту.
+                                                            </span>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-arrow">
+                                        <div class="card-arrow-top-left"></div>
+                                        <div class="card-arrow-top-right"></div>
+                                        <div class="card-arrow-bottom-left"></div>
+                                        <div class="card-arrow-bottom-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                <span class="w-100 text-center text-white fw-600 fs-25">Демо</span>
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="col-12">
+                                <div class="card h-100 bg-gray-900">
+                                    <div class="card-body">
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12 mb-2">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Для демонстрации используются контракт No-Scam со следующими настройками
+                                                            </span>
+                                                        </div>
+                                                        <div class="w-100 mb-2">
+                                                            <img class="ratio ratio-16x9" src="assets/img/staking_setting.PNG">
+                                                        </div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Контракт доступен в сети BSC Testnet по <a href="https://testnet.bscscan.com/address/0x648aB5524a517c43aA39699d8a05FaDFdFC82708" target="_blank">следующему</a> адресу
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Подключение кошелька</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12 mb-2">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <button type="button" class="btn btn-outline-success btn-connect">Подключить</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-arrow">
+                                        <div class="card-arrow-top-left"></div>
+                                        <div class="card-arrow-top-right"></div>
+                                        <div class="card-arrow-bottom-left"></div>
+                                        <div class="card-arrow-bottom-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-arrow">
+                            <div class="card-arrow-top-left"></div>
+                            <div class="card-arrow-top-right"></div>
+                            <div class="card-arrow-bottom-left"></div>
+                            <div class="card-arrow-bottom-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="app-footer">
+                Made with <i class="bi bi-heart-fill"></i> | MetaPonzi 2022 | All rights violated long ago...
+            </div>
+        </div>
+
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <script type="text/javascript" src="assets/dapps/dapp_staking/libs/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/dapps/dapp_staking/libs/ethers.umd.min.js"></script>
+        <script type="text/javascript" src="assets/dapps/dapp_staking/libs/web3.min.js"></script>
+        <script type="text/javascript" src="assets/dapps/dapp_staking/libs/web3-provider.min.js"></script>
+        <script type="text/javascript" src="assets/dapps/dapp_staking/libs/web3modal.min.js"></script>
+        <script type="text/javascript" src="assets/dapps/dapp_staking/libs/evm-chains.min.js"></script>
+        
+        <script type="text/javascript" src="assets/dapps/dapp_staking/dapp_abi.js"></script>
+        <script type="text/javascript" src="assets/dapps/dapp_staking/dapp_setting.js"></script>
+        <script type="text/javascript" src="assets/dapps/dapp_staking/dapp.js"></script>
+    </body>
+</html>

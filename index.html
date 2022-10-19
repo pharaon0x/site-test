@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+        <title>MetaPonzi</title>
+
+        <link href="assets/css/vendor.min.css" rel="stylesheet">
+        <link href="assets/css/app.min.css" rel="stylesheet">
+        <link href="assets/css/extend.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="app" class="app app-footer-fixed">
+            <div id="header" class="app-header">
+                <div class="desktop-toggler">
+                    <button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+
+                <div class="mobile-toggler">
+                    <button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled" data-toggle-target=".app">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+
+                <div class="brand">
+                    <a href="#" class="brand-logo">
+                        <span class="brand-img"></span>
+                        <span class="brand-text">MetaPonzi</span>
+                    </a>
+                </div>
+
+                <div class="menu">
+                    <div class="menu-item">
+                        <a href="#" class="menu-link">
+                            <div class="menu-icon">
+                                <i class="bi bi-telegram nav-icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sidebar" class="app-sidebar">
+                <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+                    <div class="menu">
+                        <div class="menu-header">Меню</div>
+                        <div class="menu-item active">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon">
+                                    <i class="bi bi-gem"></i>
+                                </span>
+                                <span class="menu-text">Главная</span>
+                            </a>
+                        </div>
+                        <div class="menu-item has-sub">
+                            <a href="#" class="menu-link">
+                                <span class="menu-icon">
+                                    <i class="bi bi-controller"></i>
+                                </span>
+                                <span class="menu-text">Демо</span>
+                                <span class="menu-caret">
+                                    <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="menu-submenu">
+                                <div class="menu-item">
+                                    <a href="staking.html" class="menu-link">
+                                        <span class="menu-text">Staking</span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        <span class="menu-text">Matrix</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
+
+            <div id="content" class="app-content">
+                <div class="container">
+                    <div class="card mb-2 mx-auto bg-gray-800">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <span class="eye-img"></span>
+                            <span class="mb-1 text-center text-white fs-30 fw-500 ls-2 line-height-1">MetaPonzi</span>
+                            <span class="w-100 text-center text-uppercase text-warning fw-600 fs-16">
+                                <span class="text-nowrap">От фараона,</span> 
+                                <span class="text-nowrap">для фараонов</span>
+                            </span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-danger fw-600 no-wrap fs-16">
+                                <span class="text-nowrap">--DISCLAIMER!--</span>
+                                <span class="text-nowrap">--DISCLAIMER!--</span>
+                                <span class="text-nowrap">--DISCLAIMER!--</span>
+                            </span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-info fw-500 fs-16">Материалы предоставлены исключительно в ознакомительных <span class="text-nowrap">целях!😉</span></span>
+                            <span class="w-100 text-center text-success fw-500 fs-16">
+                                <div class="d-inline-flex">
+                                    <span>Все совпадения и нарушения закона <s>Кулона</s> - случайны!</span>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <span>Соблюдайте правила и живите дружно!</span>
+                                </div>
+                            </span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-white fw-500 fs-25">Как это работает?</span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="w-100">
+                                <img class="ratio ratio-16x9" src="assets/img/hiw_ponzi.png">
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-success fw-500 fs-16">
+                                <div class="d-inline-flex">
+                                    <span>
+                                        Раньше <span class="text-info fw-600">Понци</span> приходилось прилагать кучу усилий, чтобы реализовать свою схему.
+                                    </span>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <span>
+                                        Но со смарт-контрактами от <span class="text-warning fw-600">Фараона</span> это стало просто как никогда.
+                                    </span>
+                                </div>
+                            </span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-white fw-500 fs-25">Только посмотрите на его результаты!</span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="w-100">
+                                <img class="ratio ratio-16x9" src="assets/img/samples/bnb100x.png">
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-white fw-500 fs-25">А вот результат типичного мамонта!</span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="w-100">
+                                <img class="ratio ratio-16x9" src="assets/img/samples/mother-investor.png">
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-white fw-500 fs-25">Поздно зашел...</span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="w-100">
+                                <img class="ratio ratio-16x9" src="assets/img/samples/review.png">
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-white fw-500 fs-25">Вот еще несколько успешных кейсов:</span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div id="carousel-profit-samples" class="carousel slide w-100" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-profit-samples" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-profit-samples" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carousel-profit-samples" data-bs-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="assets/img/samples/bnb2x.png" class="d-block w-100" alt="" />
+                                        <div class="carousel-caption d-none">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/samples/smt.png" class="d-block w-100" alt="" />
+                                        <div class="carousel-caption d-none">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/samples/maticfury.png" class="d-block w-100" alt="" />
+                                        <div class="carousel-caption d-none">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carousel-profit-samples" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon text-black"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-profit-samples" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <span class="w-100 text-center text-white fw-500 fs-25">Теперь каждый может стать как Понци!</span>
+                            <div class="my-2 card-hr bg-warning"></div>
+                            <div class="row col-12 mx-auto">
+                                <div class="col-12 mb-2">
+                                    <div class="card bg-gray-900">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                                <span class="w-100 text-center text-white fw-500 fs-25">Контракты от <span class="text-warning fw-600">Фараона</span> это:</span>
+                                            </div>
+                                            <div class="row col-12 mx-auto">
+                                                <div class="col-12 mb-2">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body">
+                                                            <div class="mb-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-success fw-500 fs-20">Любые EVM-сети</span>
+                                                            </div>
+                                                            <div class="my-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-white fs-15">
+                                                                    Контракты могут быть развернуты в любых EVM совместимых сетях, будь то Ethereum, BSC или Polygon.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 mb-2">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body">
+                                                            <div class="mb-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-success fw-500 fs-20">Качество</span>
+                                                            </div>
+                                                            <div class="my-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-white fs-15">
+                                                                    Все контракты тщательно тестируются, а при разработке используются только лучшие практики, что обеспечивает стабильность и предсказуемость их работы.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 mb-2">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body">
+                                                            <div class="mb-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-success fw-500 fs-20">Документация</span>
+                                                            </div>
+                                                            <div class="my-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-white fs-15">
+                                                                    К каждому контракту прилагается подробная документация по его настройке, установке и привязке к сайту, а сам код контракта полностью прокомментирован.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 mb-2">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body">
+                                                            <div class="mb-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-success fw-500 fs-20">Безопасность</span>
+                                                            </div>
+                                                            <div class="my-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-white fs-15">
+                                                                    Все контракты (кроме full-scam версий) полностью безопасны, не содержат лазеек, бекдоров или других уязвимостей, поэтому без проблем проходят аудиты безопасности и листятся на агрегаторах.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 mb-2">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body">
+                                                            <div class="mb-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-success fw-500 fs-20">Свобода</span>
+                                                            </div>
+                                                            <div class="my-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-white fs-15">
+                                                                    Вам решать как будет выглядеть сайт проекта. В комплекте к каждому смарт-контракту идет JS код, который позволит в кратчайшие сроки привязать контракт к любому фронтенду.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body">
+                                                            <div class="mb-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-success fw-500 fs-20">Поддержка</span>
+                                                            </div>
+                                                            <div class="my-2 card-hr bg-success"></div>
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-white fs-15">
+                                                                    Покупая любой контракт вы получите подробный ликбез по данному направлению, несколько успешных кейсов, советы по рекламе, доступ ко всем будущим обновлениям, а также помощь с настройкой и установкой контракта.
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                                <span class="w-100 text-center text-white fw-500 fs-25">Сейчас доступны следующие контракты:</span>
+                                            </div>
+                                            <div class="row col-12 mx-auto">
+                                                <div class="col-12 col-md-6 mb-2">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body d-flex flex-column justify-content-between">
+                                                            <div class="d-flex flex-column h-100 justify-content-between">
+                                                                <div>
+                                                                    <div class="mb-2 card-hr bg-warning"></div>
+                                                                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                        <span class="w-100 text-center text-warning fw-500 fs-25">Staking</span>
+                                                                    </div>
+                                                                    <div class="my-2 card-hr bg-warning"></div>
+                                                                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                        <span class="w-100 text-center text-white fs-15">
+                                                                            Классика жанра.
+                                                                            Мамонты закидывают свои монеты на баланс контракта и получают право забрать свои и некоторый процент через определенный срок.
+                                                                            Именно на этом типе контрактов был основан проект BNB42, который в феврале 2022 заскамился на 2.8kk вечнозеленых.
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="my-2 card-hr bg-warning"></div>
+                                                                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                        <ul class="text-white fs-15">
+                                                                            <li>🔶 Простая, знакомая и понятная мамонту схема</li>
+                                                                            <li>🔶 Для работы достаточно простого лендинга</li>
+                                                                            <li>🔶 Можно настроить любые сроки и проценты по депозиту</li>
+                                                                            <li>🔶 Многоуровневая реферальная система</li>
+                                                                            <li>🔶 3 типа контракта: full, semi и no-scam</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="my-2 card-hr bg-warning"></div>
+                                                                <div class="d-flex justify-content-center text-warning fs-25 fw-500">
+                                                                    <span>1000$</span>
+                                                                </div>
+                                                                <div class="my-2 card-hr bg-warning"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 mb-2">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body d-flex flex-column justify-content-between">
+                                                            <div class="d-flex flex-column h-100 justify-content-between">
+                                                                <div>
+                                                                    <div class="mb-2 card-hr bg-warning"></div>
+                                                                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                        <span class="w-100 text-center text-warning fw-500 fs-25">Matrix</span>
+                                                                    </div>
+                                                                    <div class="my-2 card-hr bg-warning"></div>
+                                                                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                        <span class="w-100 text-center text-white fs-15">
+                                                                            По мотивам нашумевшей ExpressGame.
+                                                                            Мамонты покупают уровни и получают две выплаты, сумма которых больше цены уровня.
+                                                                            Относительно новое направление, хорошо себя показавшее на рынке СНГ и почти неизвестное западному мамонту.
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="my-2 card-hr bg-warning"></div>
+                                                                    <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                        <ul class="text-white fs-15">
+                                                                            <li>🔶 Свежее направление для западного рынка</li>
+                                                                            <li>🔶 Для работы нужен сайт с продуманным дизайном</li>
+                                                                            <li>🔶 Настройка количества, стоимости и выплаты по уровням</li>
+                                                                            <li>🔶 Многоуровневая реферальная система</li>
+                                                                            <li>🔶 2 типа контракта: full и no-scam</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div class="my-2 card-hr bg-warning"></div>
+                                                                <div class="d-flex justify-content-center text-warning fs-25 fw-500">
+                                                                    <span>1500$</span>
+                                                                </div>
+                                                                <div class="my-2 card-hr bg-warning"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-2 card-hr bg-warning"></div>
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <img class="uncle-sam" src="assets/img/uncle-sam.png">
+                                                    <span class="w-100 text-center text-warning text-uppercase fw-500 fs-35">БУДЬ В ТЕМЕ!</span>
+                                                </div>
+                                                <div class="my-2 card-hr bg-warning"></div>
+                                                <div class="col-12">
+                                                    <div class="card h-100 bg-gray-800">
+                                                        <div class="card-body">
+                                                            <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                                <span class="w-100 text-center text-warning fw-500 fs-25">Связь @pharaon0x</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-arrow">
+                                                            <div class="card-arrow-top-left"></div>
+                                                            <div class="card-arrow-top-right"></div>
+                                                            <div class="card-arrow-bottom-left"></div>
+                                                            <div class="card-arrow-bottom-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-arrow">
+                                            <div class="card-arrow-top-left"></div>
+                                            <div class="card-arrow-top-right"></div>
+                                            <div class="card-arrow-bottom-left"></div>
+                                            <div class="card-arrow-bottom-right"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-arrow">
+                            <div class="card-arrow-top-left"></div>
+                            <div class="card-arrow-top-right"></div>
+                            <div class="card-arrow-bottom-left"></div>
+                            <div class="card-arrow-bottom-right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="app-footer">
+                Made with <i class="bi bi-heart-fill"></i> | MetaPonzi 2022 | All rights violated long ago...
+            </div>
+        </div>
+
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>
