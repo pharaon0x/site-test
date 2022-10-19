@@ -32,6 +32,11 @@ function get_short_address(address, tailsLength = 5) {
 
 function set_wallet_address() {
     WALLET_ADDRESS = PROVIDER.selectedAddress
+
+    if (isNaN(WALLET_ADDRESS)) {
+        WALLET_ADDRESS = PROVIDER.accounts[0]
+    }
+
     BUTTON_CONNECT.text(get_short_address(WALLET_ADDRESS))
 }
 
