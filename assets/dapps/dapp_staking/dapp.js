@@ -42,22 +42,24 @@ function set_wallet_address() {
     }
 }
 
+async function update_private() {
+    set_wallet_address()
+}
+
 async function wallet_connect() {
     setTimeout(() => {
         BUTTON_CONNECT.blur()
     }, 250)
 
     if (await check_wallet_connect()) {
-        $('.log').text($('.log').text() + "| Success check")
         return true
     }
-    $('log').text($('log').text() + "| Fail check")
+
     console.log('Opening a dialog', W3_MODAL)
 
     try {
         PROVIDER = await W3_MODAL.connect()
-        $('.log').text($('.log').text() + "| W3 connect")
-        set_wallet_address()
+        update_private()
         return true
     } catch (e) {
         console.log('Could not get a wallet connection', e)
@@ -70,11 +72,11 @@ async function check_wallet_connect() {
         PROVIDER = web3.currentProvider
     } catch (e) {
         console.log('Could find web3 provider', e)
-        $('.log').text($('.log').text() + "| Could find web3 provider")
         return false
     }
+
     if (typeof (PROVIDER.selectedAddress) == 'string' || typeof (PROVIDER.accounts[0]) == 'string') {
-        set_wallet_address()
+        update_private()
         return true
     } else {
         return false
