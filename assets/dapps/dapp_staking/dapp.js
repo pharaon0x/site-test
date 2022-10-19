@@ -65,12 +65,26 @@ async function check_wallet_connect() {
     try {
         PROVIDER = web3.currentProvider
     } catch (e) {
-        console.log('Could find web3 provider', e)
-        $('.log').text("Could find web3 provider")
-        return false
+        try {
+            PROVIDER = await W3_MODAL.connect()
+        } catch(e) {
+            console.log('Could find web3 provider', e)
+            return false
+        }
     }
-    if (typeof (PROVIDER.selectedAddress) == 'string' || typeof (PROVIDER.accounts[0]) == 'string') {
-        $('.log').text("OK")
+
+    address = NaN
+    try {
+        address = PROVIDER.selectedAddress
+    } catch(e) {
+        try {
+            address = PROVIDER.accounts[0]
+        } catch (e) {
+            console.log('Could find address', e)
+        }
+    }
+
+    if (typeof (address) == 'string') {
         set_wallet_address()
         return true
     } else {
