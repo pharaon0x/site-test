@@ -36,22 +36,17 @@ function set_wallet_address() {
 }
 
 async function wallet_connect() {
-    setTimeout(() => {
-        BUTTON_CONNECT.blur()
-    }, 500)
-
-    if (await check_wallet_connect()) {
+    if (await web3check()) {
         return true
     }
 
-    console.log('Opening a dialog', W3_MODAL)
-    
+    console.log('Opening a dialog', web3Modal)
     try {
-        PROVIDER = await W3_MODAL.connect()
+        PROVIDER = await web3Modal.connect()
         set_wallet_address()
-
         return true
     } catch (e) {
+        console.log('Could not get a wallet connection', e)
         return false
     }
 }
@@ -63,9 +58,7 @@ async function check_wallet_connect() {
         console.log('Could find web3 provider', e)
         return false
     }
-
     if (typeof (PROVIDER.selectedAddress) == 'string') {
-        WALLET_ADDRESS = PROVIDER.selectedAddress
         set_wallet_address()
         return true
     } else {
@@ -77,5 +70,9 @@ $(function () {
     BUTTON_CONNECT = $('.btn-connect')
 
     BUTTON_CONNECT.on('click', wallet_connect)
+
+    setTimeout(() => {
+        web3check()
+    }, 500)
 })
 
