@@ -42,7 +42,7 @@ function set_wallet_address() {
 
 async function wallet_connect() {
     setInterval(() => {
-        BUTTON_CONNECT.fade()
+        BUTTON_CONNECT.blur()
     }, 250)
 
     if (await check_wallet_connect()) {
