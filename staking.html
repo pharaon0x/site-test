@@ -366,7 +366,7 @@
                                                         </div>
                                                         <div class="d-flex flex-column align-items-center justify-content-center w-100">
                                                             <span class="w-100 text-center text-white fs-15">
-                                                                Контракт доступен в сети BSC Testnet по <a href="https://testnet.bscscan.com/address/0x648aB5524a517c43aA39699d8a05FaDFdFC82708" target="_blank">следующему</a> адресу
+                                                                Контракт доступен в сети BSC Testnet по <a href="https://testnet.bscscan.com/address/0x22D43CFcae352258E5f146498Af0e5442934BD20" target="_blank">следующему</a> адресу
                                                             </span>
                                                         </div>
                                                     </div>
@@ -387,8 +387,10 @@
                                                 <div class="card h-100 bg-gray-800">
                                                     <div class="card-body">
                                                         <div class="d-flex flex-column align-items-center justify-content-center w-100">
-                                                            <span class="log"></span>
-                                                            <button type="button" class="btn btn-outline-success btn-connect">Подключить</button>
+                                                            <button type="button" class="btn btn-outline-success btn_connect mb-2">Подключить</button>
+                                                            <span class="w-100 text-center text-white fs-15">
+                                                                Подключение кошелька происходит при нажатии на элемент с классом btn-connect (.btn-connect)
+                                                            </span>
                                                         </div>
                                                     </div>
                                                     <div class="card-arrow">
@@ -399,6 +401,188 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Статистика контракта</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12 mb-2">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <div class="mb-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Статус контракта (.launched)</span>
+                                                            <span class="w-100 text-center text-success fs-15 launched">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Дата запуска (.launch_date)</span>
+                                                            <span class="w-100 text-center text-success fs-15 launch_date">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Количество пользователей (.n_users)</span>
+                                                            <span class="w-100 text-center text-success fs-15 n_users">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во депозитов (.n_deposits)</span>
+                                                            <span class="w-100 text-center text-success fs-15 n_deposits">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во выплат (.n_withdrawals)</span>
+                                                            <span class="w-100 text-center text-success fs-15 n_withdrawals">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Сумма депозитов (.in_sum)</span>
+                                                            <span class="w-100 text-center text-success fs-15 in_sum">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Сумма выплат (.out_sum)</span>
+                                                            <span class="w-100 text-center text-success fs-15 out_sum">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Сумма реф выплат (.ref_sum)</span>
+                                                            <span class="w-100 text-center text-success fs-15 ref_sum">-</span>
+                                                            <div class="mt-2 card-hr bg-warning"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Статистика пользователя</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12 mb-2">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <div class="mb-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-danger fs-15">Необходимо подключение кошелька и хотя бы один депозит</span>
+                                                            <span class="w-100 text-center text-info fs-15">Для демонстрации используется кошелек: </span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">ID (.user_id)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_id">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Дата регистрации (.user_reg_time)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_reg_time">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Адрес реферера (.user_referrer)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_referrer">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во вкладов (.user_n_deposits)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_n_deposits">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во выплат (.user_n_withdrawals)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_n_withdrawals">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Сумма вкладов (.user_in_sum)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_in_sum">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Сумма выплат (.user_out_sum)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_out_sum">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Сумма реф выплат (.user_ref_sum)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_ref_sum">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Доступная для вывода реф выплата (.user_ref_payable)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_ref_payable">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Всего доступно для вывода (.user_withdrawable)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_withdrawable">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Дата и время последней выплаты (.user_last_payout_time)</span>
+                                                            <span class="w-100 text-center text-success fs-15 user_last_payout_time">-</span>
+                                                            <div class="mt-2 card-hr bg-warning"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Реферальная система</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12 mb-2">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <div class="mb-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-danger fs-15">Необходимо подключение кошелька и хотя бы один депозит</span>
+                                                            <span class="w-100 text-center text-info fs-15">Для демонстрации используется кошелек: </span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во рефералов 1 уровня (.n_ref_1)</span>
+                                                            <span class="w-100 text-center text-success fs-15 n_ref_1">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во рефералов 2 уровня (.n_ref_2)</span>
+                                                            <span class="w-100 text-center text-success fs-15 n_ref_2">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во рефералов 3 уровня (.n_ref_3)</span>
+                                                            <span class="w-100 text-center text-success fs-15 n_ref_3">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во рефералов 4 уровня (.n_ref_4)</span>
+                                                            <span class="w-100 text-center text-success fs-15 n_ref_4">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Кол-во рефералов 5 уровня (.n_ref_5)</span>
+                                                            <span class="w-100 text-center text-success fs-15 n_ref_5">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15">Реферальная ссылка (.ref_link)</span>
+                                                            <span class="w-100 text-center text-success fs-15 link ref_link">-</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Депозит</span>
+                                        </div>
+                                        <div class="row col-12 mx-auto">
+                                            <div class="col-12 mb-2">
+                                                <div class="card h-100 bg-gray-800">
+                                                    <div class="card-body">
+                                                        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15 mb-2">Выбор продолжительности депозита (.dep_duration) и размера депозита (.dep_value)</span>
+                                                            <div class="d-flex">
+                                                                <select class="form-select text-center dep_duration me-2">
+                                                                    <option value="24" precent="1.1">1 День</option>
+                                                                    <option value="48" precent="1.2">2 Дня</option>
+                                                                    <option value="72" precent="1.3">3 Дня</option>
+                                                                    <option value="96" precent="1.4">4 Дня</option>
+                                                                    <option value="120" precent="1.5">5 Дней</option>
+                                                                </select>
+                                                                <input type="number" class="form-control text-center dep_value" placeholder="100">
+                                                            </div>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15 mb-2">Расчет прибыли (.dep_profit)</span>
+                                                            <span class="w-100 text-center text-success fs-15 dep_profit">0</span>
+                                                            <div class="my-2 card-hr bg-warning"></div>
+                                                            <span class="w-100 text-center text-white fs-15 mb-2">Кнопка депозита (.btn_deposit)</span>
+                                                            <button type="button" class="btn btn-outline-success btn_deposit">Депозит</button>
+                                                            <div class="mt-2 card-hr bg-warning"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-arrow">
+                                                        <div class="card-arrow-top-left"></div>
+                                                        <div class="card-arrow-top-right"></div>
+                                                        <div class="card-arrow-bottom-left"></div>
+                                                        <div class="card-arrow-bottom-right"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-center justify-content-center w-100 mb-2">
+                                            <span class="w-100 text-center text-warning fw-500 fs-25">Вывод</span>
                                         </div>
                                     </div>
                                     <div class="card-arrow">
@@ -428,6 +612,7 @@
         <script src="assets/js/app.min.js"></script>
 
         <script type="text/javascript" src="assets/dapps/dapp_staking/libs/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/dapps/dapp_staking/libs/notify.min.js"></script>
         <script type="text/javascript" src="assets/dapps/dapp_staking/libs/ethers.umd.min.js"></script>
         <script type="text/javascript" src="assets/dapps/dapp_staking/libs/web3.min.js"></script>
         <script type="text/javascript" src="assets/dapps/dapp_staking/libs/web3-provider.min.js"></script>
